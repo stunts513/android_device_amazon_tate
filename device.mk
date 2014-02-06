@@ -84,4 +84,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m
 
+#Gecko related things we need (for now just device specific modules)
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/modules/ansi_cprng.ko:system/usr/lib/modules/ansi_cprng.ko \
+    $(DEVICE_FOLDER)/modules/atmel_mxt_ts.ko:system/usr/lib/modules/atmel_mxt_ts.ko \
+    $(DEVICE_FOLDER)/modules/bcmdhd.ko:system/usr/lib/modules/bcmdhd.ko \
+    $(DEVICE_FOLDER)/modules/option.ko:system/usr/lib/modules/option.ko \
+    $(DEVICE_FOLDER)/modules/pvrsrvkm_sgx540_120.ko:system/usr/lib/modules/pvrsrvkm_sgx540_120.ko \
+    $(DEVICE_FOLDER)/modules/scsi_wait_scan.ko:system/usr/lib/modules/scsi_wait_scan.ko \
+    $(DEVICE_FOLDER)/modules/usbserial.ko:system/usr/lib/modules/usbserial.ko \
+    $(DEVICE_FOLDER)/modules/usb_wwan.ko:system/usr/lib/modules/usb_wwan.ko
+
 $(call inherit-product-if-exists, vendor/amazon/tate/tate-vendor.mk)
