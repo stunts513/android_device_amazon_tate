@@ -69,7 +69,7 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
 COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
 LINEEND=""
-echo " vendor/amazon/omap4-common/proprietary/vendor/lib/hw/gralloc.omap4460.so:/system/vendor/lib/hw/gralloc.omap4.so \" >> $MAKEFILE
+echo ' vendor/amazon/omap4-common/proprietary/vendor/lib/hw/gralloc.omap4460.so:/system/vendor/lib/hw/gralloc.omap4.so \' >> $MAKEFILE
     fi
 echo " $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
