@@ -86,7 +86,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m
 
-#Gecko related things we need (for now just device specific modules)
+#Gecko related things we need (for now just device specific modules and a bluetooth related package)
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
     $(DEVICE_FOLDER)/modules/atmel_mxt_ts.ko:system/lib/modules/atmel_mxt_ts.ko \
@@ -96,6 +96,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
     $(DEVICE_FOLDER)/modules/usbserial.ko:system/lib/modules/usbserial.ko \
     $(DEVICE_FOLDER)/modules/usb_wwan.ko:system/lib/modules/usb_wwan.ko
+
+PRODUCT_PACKAGES += \
+    bluetooth.default
 
 $(call inherit-product-if-exists, vendor/amazon/tate/tate-vendor.mk)
 $(call inherit-product-if-exists, vendor/amazon/omap4-common/omap4-common-vendor-540_120.mk)
