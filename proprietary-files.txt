@@ -29,6 +29,7 @@ bin/start_smc.sh
 bin/atmel_touch.sh
 
 # Firmware
+vendor/firmware/bcm2076_20mhz.hcd
 vendor/firmware/ducati-m3.bin
 vendor/firmware/fw_bcmdhd.bin
 vendor/firmware/fw_bcmdhd_apsta.bin
